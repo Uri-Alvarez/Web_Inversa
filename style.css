@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f9f9f9;
+}
+
+.producto {
+    display: flex;
+    gap: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.galeria {
+    flex: 1;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.miniaturas img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.miniaturas img:hover {
+    border-color: #f60;
+}
+
+.info {
+    flex: 1;
+}
+
+.precio {
+    font-size: 24px;
+    color: #f60;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.descuento {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: #f60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #e55a00;
+}
