@@ -1,81 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
-    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
-.producto {
-    display: flex;
-    gap: 40px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.galeria {
-    flex: 1;
-}
-
-.galeria img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-.miniaturas {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.miniaturas img {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px;
-}
-
-.miniaturas img:hover {
-    border-color: #f60;
-}
-
-.info {
-    flex: 1;
-}
-
-.precio {
-    font-size: 24px;
-    color: #f60;
-}
-
-.tachado {
-    text-decoration: line-through;
-    color: #888;
-    font-size: 18px;
-    margin-left: 10px;
-}
-
-.descuento {
-    color: green;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.btn {
-    background: #f60;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.btn:hover {
-    background: #e55a00;
-}
-
+/* Header principal */
 .header {
     display: flex;
     justify-content: space-between;
@@ -128,4 +57,81 @@ body {
     border: none;
     border-radius: 0 25px 25px 0;
     cursor: pointer;
+}
+
+/* Producto principal (puedes adaptar más tarde) */
+.producto {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.producto-detalles {
+    max-width: 600px;
+}
+
+.precio {
+    color: #f60;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #f60;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .header-left, .header-center, .header-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-center input {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .buscar-btn {
+        border-radius: 25px;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .header-left nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header-right {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .header-right a {
+        flex: 1 1 auto;
+    }
 }
