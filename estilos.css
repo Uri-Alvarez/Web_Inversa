@@ -64,6 +64,17 @@ body {
   .user-actions span {
     margin-left: 10px;
   }
+
+  .boton-compra {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }  
   
   .promo-banner {
     background: red;
