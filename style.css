@@ -70,7 +70,11 @@ body {
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
-}
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+  
 
 .btn:hover {
     background: #e55a00;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Pago - Tienda</title>
+  <link rel="stylesheet" href="estilazos.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Finalizar Compra</h1>
+
+    <section class="section">
+      <h2>Dirección de Envío</h2>
+      <form class="form">
+        <input type="text" placeholder="Nombre completo" required />
+        <input type="text" placeholder="Dirección" required />
+        <input type="text" placeholder="Ciudad" required />
+        <input type="text" placeholder="Código Postal" required />
+        <input type="text" placeholder="País" required />
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Método de Pago</h2>
+      <form class="form">
+        <select required>
+          <option value="">Seleccionar...</option>
+          <option value="credito">Tarjeta de Crédito</option>
+          <option value="debito">Tarjeta de Débito</option>
+        </select>
+        <input type="text" placeholder="Número de tarjeta" required />
+        <input type="text" placeholder="Nombre en la tarjeta" required />
+        <input type="text" placeholder="MM/AA" required />
+        <input type="text" placeholder="CVC" required />
+      </form>
+    </section>
+
+    <section class="section summary">
+      <h2>Resumen de la Orden</h2>
+      <div class="order-summary">
+        <p>Producto 1: $15.00</p>
+        <hr />
+        <p><strong>Total: $15.00</strong></p>
+      </div>
+      <button>Pagar Ahora</button>
+    </section>
+  </div>
+</body>
+</html>
