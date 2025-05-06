@@ -1,0 +1,112 @@
+/* estilos.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .top-bar {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+  
+  .main-nav {
+    background: #c00;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+  }
+  
+  .search-bar button {
+    background: #fff;
+    color: #c00;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .user-actions span {
+    margin-left: 10px;
+  }
+  
+  .promo-banner {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .promo-banner h1 {
+    font-size: 28px;
+  }
+  
+  .promo-banner h2 {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+  
+  .promo-banner button {
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .benefits, .warning, .flash-sale {
+    background: #0a0;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  
+  .warning {
+    background: #fff;
+    color: #0a0;
+    border-top: 2px solid #0a0;
+    border-bottom: 2px solid #0a0;
+  }
+  
+  .flash-sale {
+    background: red;
+    color: white;
+    margin-top: 10px;
+  }
+  
