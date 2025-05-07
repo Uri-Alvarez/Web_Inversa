@@ -12,28 +12,27 @@
 
     <section class="section">
       <h2>Dirección de Envío</h2>
-      <form id="formularioPago" class="form">
-        <input type="text" id="nombre" placeholder="Nombre completo" required />
-        <input type="text" id="direccion" placeholder="Dirección" required />
-        <input type="text" id="ciudad" placeholder="Ciudad" required />
-        <input type="text" id="cp" placeholder="Código Postal" required />
-        <input type="text" id="pais" placeholder="País" required />
+      <form class="form">
+        <input type="text" placeholder="Nombre completo" required />
+        <input type="text" placeholder="Dirección" required />
+        <input type="text" placeholder="Ciudad" required />
+        <input type="text" placeholder="Código Postal" required />
+        <input type="text" placeholder="País" required />
+      </form>
+    </section>
 
-        <h2>Método de Pago</h2>
-        <select id="metodo" required>
+    <section class="section">
+      <h2>Método de Pago</h2>
+      <form class="form">
+        <select required>
           <option value="">Seleccionar...</option>
           <option value="credito">Tarjeta de Crédito</option>
           <option value="debito">Tarjeta de Débito</option>
         </select>
-        <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" required />
-        <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta" required />
-        <input type="text" id="fecha" placeholder="MM/AA" required />
-        <input type="text" id="cvc" placeholder="CVC" required />
-
-        <!-- Botón que envía los datos a Supabase y descarga el PDF -->
-        <button id="btnPagarDescargar" class="btn-descarga" type="button">
-          Pagar ahora y descargar recibo de pago
-        </button>
+        <input type="text" placeholder="Número de tarjeta" required />
+        <input type="text" placeholder="Nombre en la tarjeta" required />
+        <input type="text" placeholder="MM/AA" required />
+        <input type="text" placeholder="CVC" required />
       </form>
     </section>
 
@@ -44,10 +43,10 @@
         <hr />
         <p><strong>Total: $15.00</strong></p>
       </div>
+      <a href="Img/Recibo_de_Pago.pdf" download class="btn-descarga">
+        Descargar Recibo de Pago 
+      </a>      
     </section>
   </div>
-
-  <!-- Cargar el script que maneja la lógica de Supabase -->
-  <script type="module" src="conexion.js"></script>
 </body>
 </html>
