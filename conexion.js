@@ -1,36 +1,56 @@
-const supabaseUrl = 'https://dulncmlwhzmvhvgdadlj.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1bG5jbWx3aHptdmh2Z2RhZGxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1NzA0NTcsImV4cCI6MjA2MjE0NjQ1N30.ZP0RNEpsJJq_lWxWyqePncRyajkm1LCjo7cpUVF5Kjs'
-const supabase = createClient(supabaseUrl, supabaseKey)
+// conexión a Supabase
+const supabaseUrl = 'https://dulncmlwhzmvhvgdadlj.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1bG5jbWx3aHptdmh2Z2RhZGxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1NzA0NTcsImV4cCI6MjA2MjE0NjQ1N30.ZP0RNEpsJJq_lWxWyqePncRyajkm1LCjo7cpUVF5Kjs';
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-const formulario = document.getElementById('formularioPago')
+// Referencia al formulario por su ID
+const form = document.getElementById("formularioPago");
 
-formulario.addEventListener('submit', async (e) => {
-  e.preventDefault()
+form.addEventListener("submit", async function (e) {
+  e.preventDefault(); // Prevenir recarga de página
 
-  const datos = {
-    nombre: document.getElementById('nombre').value,
-    direccion: document.getElementById('direccion').value,
-    ciudad: document.getElementById('ciudad').value,
-    cp: document.getElementById('cp').value,
-    pais: document.getElementById('pais').value,
-    metodo_pago: document.getElementById('metodo').value,
-    numero_tarjeta: document.getElementById('numeroTarjeta').value,
-    nombre_tarjeta: document.getElementById('nombreTarjeta').value,
-    fecha: document.getElementById('fecha').value,
-    cvc: document.getElementById('cvc').value,
-    total: 15.00
-  }
+  // Obtener valores del formulario
+  const nombre = document.getElementById("nombre").value;
+  const direccion = document.getElementById("direccion").value;
+  const ciudad = document.getElementById("ciudad").value;
+  const cp = document.getElementById("cp").value;
+  const pais = document.getElementById("pais").value;
+  const numero_tarjeta = document.getElementById("numeroTarjeta").value;
+  const nombre_tarjeta = document.getElementById("nombreTarjeta").value;
+  const fecha = document.getElementById("fecha").value;
+  const cvc = document.getElementById("cvc").value;
 
-  const { data, error } = await supabase
-    .from('datos_personales') // Cambia 'pagos' por el nombre real de tu tabla
-    .insert([datos])
+  // Enviar datos a Supabase
+  const response = await fetch(`${supabaseUrl}/rest/v1/datos_personales`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": supabaseKey,
+      "Authorization": `Bearer ${supabaseKey}`,
+      "Prefer": "return=representation"
+    },
+    body: JSON.stringify({
+      nombre,
+      direccion,
+      ciudad,
+      cp,
+      pais,
+      numero_tarjeta,
+      nombre_tarjeta,
+      fecha,
+      cvc
+    })
+  });
 
-  if (error) {
-    alert('❌ Error al guardar: ' + error.message)
+  // Manejo de respuesta
+  const data = await response.json();
+
+  if (!response.ok) {
+    alert('❌ Error al guardar: ' + (data.message || JSON.stringify(data)));
   } else {
-    alert('✅ Pago registrado con éxito')
-    formulario.reset()
-    // Si quieres redirigir o descargar algo, hazlo aquí
-    window.location.href = 'Img/Recibo_de_Pago.pdf'
+    alert('✅ Pago registrado con éxito');
+    form.reset();
+    // Opcional: Redirigir al recibo PDF
+    window.location.href = 'Img/Recibo_de_Pago.pdf';
   }
-})
+});

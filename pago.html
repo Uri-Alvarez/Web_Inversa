@@ -10,46 +10,48 @@
   <div class="container">
     <h1>Finalizar Compra</h1>
 
-    <section class="section">
-      <h2>Dirección de Envío</h2>
-      <form class="form">
-        <input type="text" placeholder="Nombre completo" required />
-        <input type="text" placeholder="Dirección" required />
-        <input type="text" placeholder="Ciudad" required />
-        <input type="text" placeholder="Código Postal" required />
-        <input type="text" placeholder="País" required />
-      </form>
-    </section>
+    <form id="formularioPago" class="form">
 
-    <section class="section">
-      <h2>Método de Pago</h2>
-      <form class="form">
-        <select required>
+      <section class="section">
+        <h2>Dirección de Envío</h2>
+        <input id="nombre" type="text" placeholder="Nombre completo" required />
+        <input id="direccion" type="text" placeholder="Dirección" required />
+        <input id="ciudad" type="text" placeholder="Ciudad" required />
+        <input id="cp" type="text" placeholder="Código Postal" required />
+        <input id="pais" type="text" placeholder="País" required />
+      </section>
+
+      <section class="section">
+        <h2>Método de Pago</h2>
+        <select id="metodo" required>
           <option value="">Seleccionar...</option>
           <option value="credito">Tarjeta de Crédito</option>
           <option value="debito">Tarjeta de Débito</option>
         </select>
-        <input type="text" placeholder="Número de tarjeta" required />
-        <input type="text" placeholder="Nombre en la tarjeta" required />
-        <input type="text" placeholder="MM/AA" required />
-        <input type="text" placeholder="CVC" required />
-      </form>
-    </section>
+        <input id="numeroTarjeta" type="text" placeholder="Número de tarjeta" required />
+        <input id="nombreTarjeta" type="text" placeholder="Nombre en la tarjeta" required />
+        <input id="fecha" type="text" placeholder="MM/AA" required />
+        <input id="cvc" type="text" placeholder="CVC" required />
+      </section>
 
-    <section class="section summary">
-      <h2>Resumen de la Orden</h2>
-      <div class="order-summary">
-        <p>Producto 1: $15.00</p>
-        <hr />
-        <p><strong>Total: $15.00</strong></p>
-      </div>
-      <button id="btnSoloPagar" class="btn-pagar" type="button">
-        Pagar ahora
-      </button>
-      <a href="Img/Recibo_de_Pago.pdf" download class="btn-descarga">
-        Descargar Recibo de Pago 
-      </a>      
-    </section>
+      <section class="section summary">
+        <h2>Resumen de la Orden</h2>
+        <div class="order-summary">
+          <p>Producto 1: $15.00</p>
+          <hr />
+          <p><strong>Total: $15.00</strong></p>
+        </div>
+        <button class="btn-pagar" type="submit">Pagar ahora</button>
+        <a href="Img/Recibo_de_Pago.pdf" download class="btn-descarga">
+          Descargar Recibo de Pago 
+        </a>      
+      </section>
+
+    </form>
   </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="conexion.js"></script>
 </body>
 </html>
