@@ -12,27 +12,27 @@
 
     <section class="section">
       <h2>Dirección de Envío</h2>
-      <form class="form">
-        <input type="text" placeholder="Nombre completo" required />
-        <input type="text" placeholder="Dirección" required />
-        <input type="text" placeholder="Ciudad" required />
-        <input type="text" placeholder="Código Postal" required />
-        <input type="text" placeholder="País" required />
-      </form>
-    </section>
+      <form id="formularioPago" class="form">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="text" id="direccion" placeholder="Dirección" required />
+        <input type="text" id="ciudad" placeholder="Ciudad" required />
+        <input type="text" id="cp" placeholder="Código Postal" required />
+        <input type="text" id="pais" placeholder="País" required />
 
-    <section class="section">
-      <h2>Método de Pago</h2>
-      <form class="form">
-        <select required>
+        <h2>Método de Pago</h2>
+        <select id="metodo" required>
           <option value="">Seleccionar...</option>
           <option value="credito">Tarjeta de Crédito</option>
           <option value="debito">Tarjeta de Débito</option>
         </select>
-        <input type="text" placeholder="Número de tarjeta" required />
-        <input type="text" placeholder="Nombre en la tarjeta" required />
-        <input type="text" placeholder="MM/AA" required />
-        <input type="text" placeholder="CVC" required />
+        <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" required />
+        <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta" required />
+        <input type="text" id="fecha" placeholder="MM/AA" required />
+        <input type="text" id="cvc" placeholder="CVC" required />
+
+        <a href="Img/Recibo_de_Pago.pdf" download class="btn-descarga">
+            Pagar ahora y descargar recibo de pago
+          </a>      
       </form>
     </section>
 
@@ -43,10 +43,9 @@
         <hr />
         <p><strong>Total: $15.00</strong></p>
       </div>
-      <a href="Img/Recibo_de_Pago.pdf" download class="btn-descarga">
-        Pagar ahora y descargar recibo de pago
-      </a>      
     </section>
   </div>
+
+  <script type="module" src="pago.js"></script>
 </body>
 </html>
