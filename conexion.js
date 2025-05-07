@@ -1,3 +1,5 @@
+import { createClient } from '@supabase/supabase-js'
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 // conexión a Supabase
 const supabaseUrl = 'https://dulncmlwhzmvhvgdadlj.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1bG5jbWx3aHptdmh2Z2RhZGxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1NzA0NTcsImV4cCI6MjA2MjE0NjQ1N30.ZP0RNEpsJJq_lWxWyqePncRyajkm1LCjo7cpUVF5Kjs';
