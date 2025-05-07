@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'jsr:@supabase/supabase-js@2'
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 // conexión a Supabase
 const supabaseUrl = 'https://dulncmlwhzmvhvgdadlj.supabase.co';
