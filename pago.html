@@ -30,9 +30,10 @@
         <input type="text" id="fecha" placeholder="MM/AA" required />
         <input type="text" id="cvc" placeholder="CVC" required />
 
-        <a href="Img/Recibo_de_Pago.pdf" download class="btn-descarga">
-            Pagar ahora y descargar recibo de pago
-          </a>      
+        <!-- Botón que envía los datos a Supabase y descarga el PDF -->
+        <button id="btnPagarDescargar" class="btn-descarga" type="button">
+          Pagar ahora y descargar recibo de pago
+        </button>
       </form>
     </section>
 
@@ -46,6 +47,7 @@
     </section>
   </div>
 
+  <!-- Cargar el script que maneja la lógica de Supabase -->
   <script type="module" src="pago.js"></script>
 </body>
 </html>
