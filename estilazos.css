@@ -42,7 +42,8 @@
     margin: 0.5rem 0;
   }
   
-  button {
+  .btn-descarga {
+    display: block;
     width: 100%;
     padding: 1rem;
     background-color: #ff6a00;
@@ -51,8 +52,15 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     transition: background 0.3s ease;
   }
+  
+  .btn-descarga:hover {
+    background-color: #e55b00;
+  }
+  
   
   button:hover {
     background-color: #e55b00;
