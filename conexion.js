@@ -1,3 +1,5 @@
+<script type="module" src="conexion.js"></script>
+// conexion.js
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
